@@ -1,6 +1,6 @@
-const names = ['rosephdarl', 'roseph', 'darl', 'rd+', 'rd-']
+const names = ['rosephdarl', 'roseph', 'darl', 'rd+', 'rd']
 function Post() {
-    const chosenName = Math.random() > 0.5 ? names[0] : names[4];
+    const chosenName = names[Math.floor(Math.random() * names.length)];
   return (
     <div>
         <h1>{chosenName}</h1>
