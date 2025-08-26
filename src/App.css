@@ -5,10 +5,17 @@
   text-align: center;
 }
 
+body {
+  background: #ffffff;
+}
 
 .text-white {
   color: #ffffff;
 }
 .text-white:hover {
   color: darkgrey;
+}
+
+.post {
+  background: blue;
 }
