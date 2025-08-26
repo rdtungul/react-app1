@@ -1,4 +1,6 @@
-function Post({author, body}) {
+function Post(props) {
+  const author = props.author
+  const body = props.author
   return (
     <div>
         <h1>{author}</h1>
