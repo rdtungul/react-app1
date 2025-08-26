@@ -5,8 +5,11 @@ function App() {
 
   return (
     <main>
-      <Post author="Roseph Darl" body="React JS is awesome!" />
-      <Post author="John Doe" body="Bootstrap is awesome!" />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
     </main>
   )
 
