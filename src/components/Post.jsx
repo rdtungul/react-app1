@@ -3,10 +3,10 @@ function Post(props) {
   const author = props.author
   const body = props.body
   return (
-    <div className={classes.post} style={{color: 'light blue'}}>
-        <h1>{author}</h1>
-        <p>{body}</p>
-    </div>
+    <li className={classes.post} style={{color: 'light blue'}}>
+        <h1 className={classes.title}>{author}</h1>
+        <p className={classes.subtitle}>{body}</p>
+    </li>
   )
 }
 

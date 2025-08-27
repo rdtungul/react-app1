@@ -1,12 +1,12 @@
 import './App.css'
-import Post from './components/Post';
+import PostsList from './components/PostsList'
 
 function App() {
 
   return (
     <main>
-      <Post author="Roseph Darl" body="React JS is awesome!" />
-      <Post author="John Doe" body="Bootstrap is awesome!" />
+      <PostsList />
+      <PostsList />
     </main>
   )
 
@@ -14,3 +14,4 @@ function App() {
 }
 
 export default App
+   
