@@ -22,3 +22,7 @@ textarea, input {
     background-color: #ffffff;
     color: black;
 }
+
+.enteredBodyText {
+    color: #000000;
+}
