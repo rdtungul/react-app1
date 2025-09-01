@@ -1,27 +1,15 @@
-import {useState} from 'react'
 import classes from './NewPost.module.css'
 
-function NewPost() {
+function NewPost(props) {
   
-  const [enteredBody, setEnteredBody] = useState('');
-  const [enteredName, setEnteredName] = useState('');
-  // document.querySelector('textarea').addEventListener('change', ()=> {}) // Vanilla JS Event Listener
-  function changeBodyHandler(e) {
-    setEnteredBody(e.target.value)
-  } // React Event Listener - Body Text
-  function changeNameHandler(e) {
-    setEnteredName(e.target.value)
-  } // React Event Listener - Name Text
   return (
     <form className={classes.form}>
         <p>
             <label htmlFor="body">Text</label>
-            <textarea id="body"  rows={3} onChange={changeBodyHandler} value={enteredBody} />
+            <textarea id="body"  rows={3} onChange={props.onBodyChange} />
         </p>
-        <p className={classes.enteredBodyText}>{enteredBody}</p>
         <p><label htmlFor="name">Your Name</label>
-        <input type="text" id="name" onChange={changeNameHandler} value={enteredName} required />
-        <p className={classes.enteredBodyText}>{enteredName}</p>
+        <input type="text" id="name" onChange={props.onAuthorChange} required />
         </p>
     </form>
   )
