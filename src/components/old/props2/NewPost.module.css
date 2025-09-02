@@ -1,0 +1,25 @@
+.form {
+    background: lightblue;
+    padding: .5rem;
+    width: 20rem;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 0.05rem;
+    color: blue;
+    font-weight: bold;
+}
+
+textarea, input {
+    max-width: 100%;
+    width: 80%;
+    height: 2rem;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: black;
+}
+
+.enteredBodyText {
+    color: #000000;
+}
