@@ -1,0 +1,14 @@
+.post {
+  background: blue;
+  padding: 1rem;
+  margin: .2rem 0;
+  border-radius: .5rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+}
+.subtitle {
+  font-size: 1rem;
+}
