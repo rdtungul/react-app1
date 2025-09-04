@@ -10,14 +10,14 @@ function PostsList() {
   const [enteredBody, setEnteredBody] = useState('')
   const [enteredAuthor, setEnteredAuthor] = useState('')
 
-  function showModal() {
+  function openModal() {
     setModalIsVisible(true)
   } // open modal function
 
   function closeModal() {
     setModalIsVisible(false);
   } // close modal function
-
+  
   function bodyChangeHandler(e) {
     setEnteredBody(e.target.value)
   }
@@ -27,10 +27,10 @@ function PostsList() {
 
   return (
     <>
-    <MainHeader createPost={showModal} />
+    <MainHeader createPost={openModal} />
       {modalIsVisible && (
         <Modal onClose={closeModal}>
-          <NewPost onBodyChange={bodyChangeHandler} onAuthorChange={authorChangeHandler} />
+          <NewPost onBodyChange={bodyChangeHandler} onAuthorChange={authorChangeHandler} onCancel={closeModal} />
         </Modal>
       )}
       <ul className={classes.posts}>
