@@ -23,8 +23,8 @@ function PostsList() {
   return (
     <>
       {modalIsVisible && (
-        <Modal>
-          <NewPost onCancel= {closeModal} onBodyChange={bodyChangeHandler} onAuthorChange={authorChangeHandler} />
+        <Modal onClose={closeModal}>
+          <NewPost onBodyChange={bodyChangeHandler} onAuthorChange={authorChangeHandler} />
         </Modal>
       )}
       <ul className={classes.posts}>
