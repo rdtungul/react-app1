@@ -4,7 +4,7 @@ import PostsList from './components/PostsList'
 function App() {
 
   return (
-    <main>
+    <main className='main'>
       <PostsList />
     </main>
   )

@@ -9,7 +9,9 @@
 
 .title {
   font-size: 2rem;
+  word-wrap: break-word;
 }
 .subtitle {
   font-size: 1rem;
+  word-wrap: break-word;
 }

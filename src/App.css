@@ -1,7 +1,12 @@
 #root {
+  width: 60% !important;
   max-width: 1920px;
   margin: 0 auto;
   padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.main {
 }
 
 body {

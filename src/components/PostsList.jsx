@@ -7,8 +7,10 @@ import MainHeader from './MainHeader';
 
 function PostsList() {
   const [modalIsVisible, setModalIsVisible] = useState(true); // modal on and off state
-  const [enteredBody, setEnteredBody] = useState('')
-  const [enteredAuthor, setEnteredAuthor] = useState('')
+
+  const [posts, setPosts] = useState([
+    { author: 'Roseph Darl', body: 'Full-Stack Web Developer | Solopreneur | Instructor' },
+  ])
 
   function openModal() {
     setModalIsVisible(true)
@@ -18,26 +20,26 @@ function PostsList() {
     setModalIsVisible(false);
   } // close modal function
   
-  function bodyChangeHandler(e) {
-    setEnteredBody(e.target.value)
+
+
+  function addPostHandler(postData) {
+    setPosts((prevPosts) => [postData, ...prevPosts]) // add new post at top
   }
-    function authorChangeHandler(e) {
-    setEnteredAuthor(e.target.value)
-  }
+
 
   return (
     <>
     <MainHeader createPost={openModal} />
       {modalIsVisible && (
-        <Modal onClose={closeModal}>
-          <NewPost onBodyChange={bodyChangeHandler} onAuthorChange={authorChangeHandler} onCancel={closeModal} />
+        <Modal>
+          <NewPost onCancel={closeModal} onSubmitPost={addPostHandler} />
         </Modal>
       )}
       <ul className={classes.posts}>
-        <Post author={enteredAuthor} body={enteredBody} />
-        <Post author="Roseph Darl" body="Full-Stack Web Developer | Solopreneur | Instructor" />
+        {posts.map((post, index) => (
+          <Post key={index} author={post.author} body={post.body} />
+        ))}
       </ul>
-
     </>
   );
 }
