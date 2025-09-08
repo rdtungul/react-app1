@@ -15,3 +15,9 @@
   font-size: 1rem;
   word-wrap: break-word;
 }
+
+.deletePost {
+  color: red !important;
+  display: flex;
+  background-color: lightblue;
+}

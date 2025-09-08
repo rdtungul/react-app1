@@ -9,8 +9,8 @@ function PostsList() {
   const [modalIsVisible, setModalIsVisible] = useState(true); // modal on and off state
 
   const [posts, setPosts] = useState([
-    { author: 'Roseph Darl', body: 'Full-Stack Web Developer | Solopreneur | Instructor' },
-  ])
+    { id: 1, author: 'Roseph Darl', body: 'Full-Stack Web Developer | Solopreneur | Instructor' },
+  ]);
 
   function openModal() {
     setModalIsVisible(true)
@@ -23,7 +23,14 @@ function PostsList() {
 
 
   function addPostHandler(postData) {
-    setPosts((prevPosts) => [postData, ...prevPosts]) // add new post at top
+    setPosts((prevPosts) => [
+      { id: Date.now(), ...postData }, // ✅ unique id
+      ...prevPosts,
+    ]);
+  }
+
+  function deletePostHandler(postId) {
+    setPosts((prevPosts) => prevPosts.filter((post) => post.id !== postId)); // ✅ delete single post
   }
 
 
@@ -36,8 +43,14 @@ function PostsList() {
         </Modal>
       )}
       <ul className={classes.posts}>
-        {posts.map((post, index) => (
-          <Post key={index} author={post.author} body={post.body} />
+        {posts.map((post) => (
+          <Post
+            key={post.id}
+            id={post.id}
+            author={post.author}
+            body={post.body}
+            onDelete={deletePostHandler}
+          />
         ))}
       </ul>
     </>
