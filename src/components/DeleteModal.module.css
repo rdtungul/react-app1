@@ -1,0 +1,35 @@
+.backdrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+    color: #000000;
+}
+
+.modal {
+    background: #F7CAC9;
+    padding: 2rem;
+    width: 20rem;
+    border-radius: .5rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.cancelBtn {
+    background-color: #ffffff;
+    color: #000000 !important;
+}
+.deleteBtn {
+    background-color: red;
+    color: #ffffff !important;
+}
