@@ -21,3 +21,7 @@
   display: flex;
   background-color: lightblue;
 }
+.deleteBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
