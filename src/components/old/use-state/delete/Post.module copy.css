@@ -1,0 +1,27 @@
+.post {
+  background: lightblue;
+  padding: 1rem;
+  margin: .2rem 0;
+  border-radius: .5rem;
+  text-align: center;
+  color: blue;
+}
+
+.title {
+  font-size: 2rem;
+  word-wrap: break-word;
+}
+.subtitle {
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+
+.deletePost {
+  color: red !important;
+  display: flex;
+  background-color: lightblue;
+}
+.deleteBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
