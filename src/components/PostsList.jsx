@@ -9,9 +9,12 @@ import MainHeader from './MainHeader';
 function PostsList() {
   const [modalIsVisible, setModalIsVisible] = useState(true); // modal on and off state
 
-  const [posts, setPosts] = useState([
-    { id: 1, author: 'Roseph Darl', body: 'Full-Stack Web Developer | Solopreneur | Instructor' },
-  ]);
+  // const [posts, setPosts] = useState([
+  //   { id: 1, author: 'Roseph Darl', body: 'Full-Stack Web Developer | Solopreneur | Instructor' },
+  // ]); // with sample post added automatically
+
+  const [posts, setPosts] = useState('');
+
 
 
   const [deleteTarget, setDeleteTarget] = useState(null); // ✅ store post to delete

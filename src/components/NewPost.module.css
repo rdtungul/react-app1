@@ -19,6 +19,7 @@ textarea, input {
     border-radius: 4px;
     background-color: #ffffff;
     color: black;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .enteredBodyText {
