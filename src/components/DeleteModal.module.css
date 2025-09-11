@@ -13,7 +13,7 @@
 }
 
 .modal {
-    background: #F7CAC9;
+    background: #FBFBFB;
     padding: 2rem;
     width: 20rem;
     border-radius: .5rem;
@@ -26,10 +26,10 @@
 }
 
 .cancelBtn {
-    background-color: #ffffff;
+    background-color: #DDDDDD;
     color: #000000 !important;
 }
 .deleteBtn {
-    background-color: red;
+    background-color: #F95959;
     color: #ffffff !important;
 }

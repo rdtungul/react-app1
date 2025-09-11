@@ -1,10 +1,10 @@
 .post {
-  background: lightblue;
+  background: #FBFBFB;
   padding: 1rem;
   margin: .2rem 0;
   border-radius: .5rem;
   text-align: center;
-  color: blue;
+  color: #6E6D6D;
 }
 
 .title {
@@ -17,9 +17,9 @@
 }
 
 .deletePost {
-  color: red !important;
+  color: #F95959 !important;
   display: flex;
-  background-color: lightblue;
+  background-color: #DDDDDD;
 }
 .deleteBtnContainer {
   display: flex;

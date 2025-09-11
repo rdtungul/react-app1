@@ -1,5 +1,5 @@
 .form {
-    background: lightblue;
+    background: #DCDCDC;
     padding: 1rem;
     width: 20rem;
     border-radius: .5rem;
@@ -8,7 +8,7 @@
 .form label {
     display: block;
     margin-bottom: 0.05rem;
-    color: blue;
+    color: #37353E;
     font-weight: bold;
 }
 
@@ -17,13 +17,13 @@ textarea, input {
     width: 97%;
     height: 2rem;
     border-radius: 4px;
-    background-color: #ffffff;
+    background-color: #eeeeee;
     color: black;
     font-family: 'Open Sans', sans-serif;
 }
 
 .enteredBodyText {
-    color: #000000;
+    color: #647FBC;
 }
 
 .actions {
@@ -38,11 +38,11 @@ textarea, input {
     padding: 0.5rem 1.5rem;
     border: none;
     border-radius: 4px;
-    border-color: darkblue;
-    color: #ffffff;
+    border-color: #37353E;
+    color: #eeeeee;
 }
 
 .cancelBtn {
-    background-color: #ffffff;
-    color: #000000 !important;
+    background-color: #647FBC;
+    color: #eeeeee !important;
 }
