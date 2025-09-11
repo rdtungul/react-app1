@@ -15,13 +15,25 @@
   font-size: 1rem;
   word-wrap: break-word;
 }
-
-.deletePost {
-  color: #F95959 !important;
+  
+.actionBtnContainer {
   display: flex;
-  background-color: #DDDDDD;
+  justify-content: flex-end;
+  gap: 0.5rem;
 }
 .deleteBtnContainer {
   display: flex;
   justify-content: flex-end;
+}
+.editBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.deletePost {
+  color: #F95959 !important;
+  background-color: #DDDDDD;
+}
+.editPost {
+  color: #37353E !important;
+  background-color: #DDDDDD;
 }

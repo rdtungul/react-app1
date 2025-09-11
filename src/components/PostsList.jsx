@@ -2,12 +2,14 @@ import { useState } from 'react';
 import NewPost from './NewPost';
 import Post from './Post';
 import Modal from './Modal';
+import EditPost from './EditPost';
 import DeleteModal from './DeleteModal';
 import classes from './PostsList.module.css'
 import MainHeader from './MainHeader';
 
 function PostsList() {
   const [modalIsVisible, setModalIsVisible] = useState(true); // modal on and off state
+  const [editPost, setEditPost] = useState(null);
 
   // const [posts, setPosts] = useState([
   //   { id: 1, author: 'Roseph Darl', body: 'Full-Stack Web Developer | Solopreneur | Instructor' },
@@ -52,12 +54,35 @@ function PostsList() {
   }
 
 
+  // ✅ Edit handlers
+  function requestEditHandler(postId) {
+    const postToEdit = posts.find((p) => p.id === postId);
+    setEditPost(postToEdit);
+  }
+
+  function updatePostHandler(updatedPost) {
+    setPosts((prevPosts) =>
+      prevPosts.map((post) => (post.id === updatedPost.id ? updatedPost : post))
+    );
+    setEditPost(null);
+  }
+
   return (
     <>
     <MainHeader createPost={openModal} />
       {modalIsVisible && (
         <Modal>
           <NewPost onCancel={closeModal} onSubmitPost={addPostHandler} />
+        </Modal>
+      )}
+
+      {editPost && (
+        <Modal>
+          <EditPost
+            post={editPost}
+            onCancel={() => setEditPost(null)}
+            onUpdate={updatePostHandler}
+          />
         </Modal>
       )}
 
@@ -80,6 +105,7 @@ function PostsList() {
               author={post.author}
               body={post.body}
               onDelete={requestDeleteHandler}
+              onEdit={requestEditHandler}
             />
           ))}
         </ul>
