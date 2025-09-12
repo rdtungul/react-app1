@@ -2,7 +2,7 @@ import { useState } from 'react';
 import NewPost from './NewPost';
 import Post from './Post';
 import Modal from './Modal';
-import EditPost from './EditPost';
+import EditPost from './EditModal';
 import DeleteModal from './DeleteModal';
 import classes from './PostsList.module.css'
 import MainHeader from './MainHeader';

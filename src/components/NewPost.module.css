@@ -34,15 +34,16 @@ textarea, input {
 
 .actions button {
     cursor: pointer;
-    font: inherit;
     padding: 0.5rem 1.5rem;
     border: none;
     border-radius: 4px;
-    border-color: #37353E;
     color: #eeeeee;
 }
-
-.cancelBtn {
+.submitBtn {
     background-color: #647FBC;
-    color: #eeeeee !important;
+    color: #ffffff !important;
+}
+.cancelBtn {
+    background-color: #ffffff;
+    color: #000000 !important;
 }

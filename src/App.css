@@ -2,7 +2,6 @@
   width: 80% !important;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
@@ -21,5 +20,5 @@ body {
 }
 
 .post {
-  background: blue;
+  background: #647FBC;
 }

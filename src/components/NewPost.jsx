@@ -40,7 +40,7 @@ function NewPost({onCancel, onSubmitPost}) {
         </p>
         <p className={classes.actions}>
         <button className={classes.cancelBtn} type='button' onClick={onCancel}>Cancel</button>
-        <button>Submit</button>
+        <button className={classes.submitBtn}>Post</button>
         </p>
     </form>
   )
