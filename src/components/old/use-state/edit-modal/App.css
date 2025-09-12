@@ -1,0 +1,24 @@
+#root {
+  width: 80% !important;
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.main {
+}
+
+body {
+  background: #ffffff;
+}
+
+.text-white {
+  color: #ffffff;
+}
+.text-white:hover {
+  color: darkgrey;
+}
+
+.post {
+  background: #647FBC;
+}
