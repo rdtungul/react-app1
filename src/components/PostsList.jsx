@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ReactGA from 'react-ga4';
 import NewPost from './NewPost';
 import Post from './Post';
 import Modal from './Modal';
@@ -40,12 +41,19 @@ useEffect(() => {
   } // close modal function
   
 
-
+  
+  
   function addPostHandler(postData) {
     setPosts((prevPosts) => [
       { id: Date.now(), ...postData }, // ✅ unique id
       ...prevPosts,
     ]);
+    // ✅ Track event
+    ReactGA.event({
+      category: "Posts",
+      action: "Created a new post",
+      label: postData.author,
+    });
   }
 
   
@@ -56,6 +64,12 @@ useEffect(() => {
   function confirmDeleteHandler() {
     setPosts((prevPosts) => prevPosts.filter((post) => post.id !== deleteTarget));
     setDeleteTarget(null); // ✅ reset after delete
+    // ✅ Track event
+    ReactGA.event({
+      category: "Posts",
+      action: "Deleted a post",
+      label: deletedPost?.author,
+    });
   }
 
   function cancelDeleteHandler() {
